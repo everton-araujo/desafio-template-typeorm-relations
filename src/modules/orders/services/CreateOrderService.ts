@@ -28,7 +28,7 @@ class CreateOrderService {
 
     @inject('CustomersRepository')
     private customersRepository: ICustomersRepository,
-  ) {}
+  ) { }
 
   public async execute({ customer_id, products }: IRequest): Promise<Order> {
     const customer = await this.customersRepository.findById(customer_id);

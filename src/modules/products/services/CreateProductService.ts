@@ -16,7 +16,7 @@ class CreateProductService {
   constructor(
     @inject('ProductsRepository')
     private productsRepository: IProductsRepository,
-  ) {}
+  ) { }
 
   public async execute({ name, price, quantity }: IRequest): Promise<Product> {
     const checkProduct = await this.productsRepository.findByName(name);
